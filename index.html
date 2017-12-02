@@ -26,27 +26,23 @@ h {
     font-size: 200px;
 }
 </style>
-
-<body>
-    <h1>Pomodoro timer</h1>
+<body>    <h1>Pomodoro timer</h1>
     <div id="timer">
         <span id="minutes">25</span>
         <span id="middle">:</span>
         <span id="seconds">00</span>
     </div>
     <div id="buttons">
-        <button id="start">Start</button>
-        <button id="stop">Stop</button>
+        <button id="start" onclick="Count()">Start</button>
+        <button id="stop" onclick="stopTimer()">Stop</button>
         <button id="reset">Reset</button>
     </div>
-    <div id="test"></div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-    <script type="text/JavaScript">
-        var minutes=document.getElementById("minutes"); var seconds= document.getElementById("seconds"); var start=document.getElementById("start"); start.addEventListener ("click", startTimer,false); var stop=document.getElementById("stop"); stop.addEventListener("click", stopTimer, false); var time=1499; function counter() { minutes=Math.floor(time/60); seconds=time-minutes*60; }
+    <script type="text/JavaScript" src="js/pomodorist.js">
     </script>
 </body>
 
