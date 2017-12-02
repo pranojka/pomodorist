@@ -16,13 +16,16 @@ function Count() {
     } else if (minutes == 0 && seconds > 0) {
         // ignore this for now ...
     } else if (minutes == 0, seconds == 0) {
+
         stopTimer()
+        //  var audio = document.getElementById(alert)
+        // audio.play()
         alert("END!");
     }
 }
 
 function start() {
-    timer = setInterval(Count, 1000);
+    timer = setInterval(Count, 10);
 
 }
 
