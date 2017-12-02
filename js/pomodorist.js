@@ -1,25 +1,35 @@
+var minutes = 24;
+var seconds = 60;
+var timer;
+
 function Count() {
+    // debugger;
+    seconds--;
+    document.getElementById("seconds").innerHTML = seconds;
+    document.getElementById("minutes").innerHTML = minutes;
 
-    var minutes = 25;
-    var seconds = 00;
-    timer = setInterval(function() {
+    if (minutes >= 1 && seconds > 0) {
+        // ignore this for now ...
+    } else if (minutes >= 1 && seconds == 0) {
+        seconds = 59;
+        minutes--;
+    } else if (minutes == 0 && seconds > 0) {
+        // ignore this for now ...
+    } else if (minutes == 0, seconds == 0) {
+        stopTimer()
+        alert("END!");
+    }
+}
 
-        document.getElementById("seconds").innerHTML = seconds % 60;
-        document.getElementById("minutes").innerHTML = parseInt(minutes);
-        seconds--;
-        if (seconds < 1) {
-            seconds = 59;
-            minutes--;
-        }
-    }, 1000);
-
-
-
+function start() {
+    timer = setInterval(Count, 1000);
 
 }
 
 function stopTimer() {
-
     clearInterval(timer);
+}
 
+function resetTimer() {
+    location.reload();
 }
