@@ -17,40 +17,66 @@ body {
     background-color: black;
     text-align: center;
 }
-
 h1 {
     font-family: cursive;
     color: red;
     font-size: 100px;
 }
-
-#timer {
+#timer {margin-top:100px;
     font-family: cursive;
     color-rendering: white;
-    font-size: 200px;
+    color:black;
+    font-size: 250px;
+}
+button {
+    margin-top: 80px;
+    padding: 15px 25px;
+    background-color: black;
+    color: white;
+  
+    
+    border-radius: 12px;
+     font-size: 30px;
+     font-style: bold;
+     text-shadow: 1px 1px black;
+}
+    button:hover{
+      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+ }
+    
+    nav {
+    float: left;
+    max-width: 100px;
+    margin-top: 30px;
+    padding: 1em;
 }
 
-button {
-    margin-top: 100px;
-    padding: 15px 25px;
-    background-color: whit;
-    display: inline-block;
-    box-shadow: 0 9px #999;
-}
 </style>
 
-<body style="background-image: url(http://footage.framepool.com/shotimg/qf/703109261-egg-timer-finishing-hourglass-countdown.jpg)">
+<body style="background-image: url(https://storybookstorage.s3.amazonaws.com/items/images/000/360/512/original/20160427-6-vkrh9m.png?1461779709)" >
+    
     <h1>Pomodoro timer</h1>
+     <nav>
+  <ul>
+      <iframe id="player" src="https://www.youtube.com/embed/9FMVtZ8B8XM"
+   width="250" height="200"></iframe>
+    <li><a href="http://www.foodnetwork.com/recipes/photos/25-minute-meals">25 minute meals </a></li>
+
+  </ul> </nav>
     <div id="timer">
         <span id="minutes">25</span>
         <span id="middle">:</span>
         <span id="seconds">00</span>
     </div>
-    <audio id="alert" src="https://www.youtube.com/watch?v=8yGfQak-q9M"> </audio>
+   
+
+    <audio id="alert" src="alarm.mp3"> </audio>
+    
     <div id="buttons">
         <button id="start" onclick="start()">Start</button>
         <button id="stop" onclick="stopTimer()">Stop</button>
         <button id="reset" onclick="resetTimer()">Reset</button>
+        <p>About <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique" target="_blank">Pomodoro Technique.</a></p>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -58,7 +84,11 @@ button {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     <script type="text/JavaScript" src="js/pomodorist.js">
+        
     </script>
+    <script type="text/javascript" src="http://www.youtube.com/player_api"></script>
+    
+
 </body>
 
 </html>

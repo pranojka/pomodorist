@@ -16,16 +16,29 @@ function Count() {
     } else if (minutes == 0 && seconds > 0) {
         // ignore this for now ...
     } else if (minutes == 0, seconds == 0) {
-
+debugger
+        var audio = document.getElementById("alert");
+    audio.play()
+     
         stopTimer()
-        //  var audio = document.getElementById(alert)
-        // audio.play()
-        alert("END!");
+     
+    
     }
 }
 
 function start() {
-    timer = setInterval(Count, 10);
+    
+  
+          
+        
+        
+    
+    if (minutes == 0, seconds == 0){
+        resetTimer() }
+   
+    
+    timer = setInterval(Count,1000);
+    
 
 }
 
